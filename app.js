@@ -217,7 +217,7 @@ function home(keepScroll) {
   card += '<div class="line"><span>Rough pad &amp; calculator<small>Show ✏️ and 🧮 buttons during the test</small></span>' + sw(SET.tools, 'tg', 'tools') + '</div>';
   if (!q && full) card += '<div class="line"><span>Full-screen exam mode<small>Warns if you leave full-screen or switch tabs</small></span>' + sw(SET.fullscreen, 'tg', 'fullscreen') + '</div>';
   var nStart = full ? sumC(counts(S.year, false)) : Math.min(S.cnt || 1e9, sumC(cYear, (function () { var m = {}; TOPICS.forEach(function (t) { if (S.secs[t]) m[t] = 1; }); return m; })()));
-  render('<div class="hgrid"><div class="hl"><section class="hero"><h1>Master the Real PYQs of the WBPSC Miscellaneous Exam</h1><p class="mu">Practise authentic WBPSC Miscellaneous papers with structured, timed sessions and performance insights.</p></section>' + stats + homeCards() + '</div><div class="hr">' +
+  render('<div class="hgrid"><div class="hl"><section class="hero"><h1>Master the Real PYQs of WBPSC Miscellaneous</h1><p class="mu">Practise authentic WBPSC Miscellaneous Question Papers with structured, timed sessions and performance insights.</p></section>' + stats + homeCards() + '</div><div class="hr">' +
     '<h2>1 · Mode</h2><div class="chips"><button class="chip ' + (!q ? 'on' : '') + '" data-act="kind" data-v="test">📝 Exam Test</button><button class="chip ' + (q ? 'on' : '') + '" data-act="kind" data-v="quiz">💡 Quiz (instant answers)</button></div>' +
     '<h2>2 · Scope</h2><div class="chips"><button class="chip ' + (full ? 'on' : '') + '" data-act="mode" data-v="full">Full paper</button><button class="chip ' + (!full ? 'on' : '') + '" data-act="mode" data-v="sec">Chapter-wise practice</button></div>' +
     '<h2>3 · Year ' + (full ? 'paper' : 'filter') + '</h2><select class="sel" id="ysel" aria-label="Select year">' + opts + '</select>' +
@@ -668,7 +668,7 @@ function toolTab(t) {
 
 /* ---------- onboarding tour ---------- */
 var TOUR = [
-  { i: '👋', t: 'Welcome to WBPSC Miscellaneous PYQs Series', d: 'Practise WBPSC Miscellaneous previous-year questions year-wise or chapter-wise, in exam-style tests or instant-feedback quizzes.' },
+  { i: '👋', t: 'Welcome to Miscellaneous PYQs', d: 'Practise WBPSC Miscellaneous Previous-Year Questions Year-wise or Chapter-wise, in exam-style tests or instant-feedback quizzes.' },
   { i: '📝', t: 'Two ways to practise', d: '<b>Exam Test</b> is timed with negative marking (and full-screen mode for full papers). <b>Quiz</b> shows the answer and explanation right away. Choose a <b>Full paper</b> by year, or <b>Chapter-wise</b> practice across all 18 topics — no date needed.' },
   { i: '🧰', t: 'Tools during a test', d: '✏️ <b>Rough pad</b> and 🧮 <b>calculator</b> are one tap away. Use ⏸ <b>Pause</b> any time — your test is saved even if you refresh. Mark your <b>confidence</b> (Sure / Guess / Confused) on each question.' },
   { i: '📊', t: 'Know your strengths', d: 'Open ⚙️ for a <b>radar chart</b>, accuracy bars by topic, time-per-question insights, your <b>daily practice calendar</b>, and export your attempted questions with your answers.' },
